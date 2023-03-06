@@ -1,7 +1,7 @@
-// 从 localStorage 中加载评论数据
+// Load comment data from localStorage.
 var comments = JSON.parse(localStorage.getItem('comments')) || [];
 
-// 添加评论
+// Add comment
 function addComment() {
   var username = document.getElementById("username").value;
   var comment = document.getElementById("comment").value;
@@ -12,14 +12,14 @@ function addComment() {
   }
 }
 
-// 删除评论
+// Delete comment
 function deleteComment(index) {
   comments.splice(index, 1);
   saveComments(); // 存储评论数据到 localStorage
   showComments();
 }
 
-// 点赞评论
+// Like a comment
 function likeComment(index) {
   if (comments[index].likes == 0) {
     comments[index].likes = 1;
@@ -28,12 +28,12 @@ function likeComment(index) {
   }
 }
 
-// 存储评论数据到 localStorage
+// Store comment data to localStorage.
 function saveComments() {
   localStorage.setItem('comments', JSON.stringify(comments));
 }
 
-// 展示评论
+// show comment
 function showComments() {
   var commentList = document.getElementById("commentList");
   commentList.innerHTML = "";
