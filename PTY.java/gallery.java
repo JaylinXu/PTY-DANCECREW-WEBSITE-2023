@@ -1,9 +1,9 @@
-// 获取模态框、图片和关闭按钮
+// Get the modal, image, and close button.
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// 点击照片弹出模态框
+// Click on image to pop-out modal
 var images = document.getElementsByClassName("gallery-image");
 for (var i = 0; i < images.length; i++) {
   images[i].onclick = function() {
@@ -12,12 +12,12 @@ for (var i = 0; i < images.length; i++) {
   }
 }
 
-// 点击关闭按钮关闭模态框
+// Click close button to close modal display
 closeBtn.onclick = function() {
   modal.style.display = "none";
 }
 
-// 点击模态框外部区域关闭模态框
+// Click on area outside of modal to close modal display
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
