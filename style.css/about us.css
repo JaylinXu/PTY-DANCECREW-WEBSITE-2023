@@ -50,14 +50,14 @@ header h1 {
 
   .image-container {
     position:absolute;
-    float: right; /* 图片向右浮动 */
-    margin-left: 0px; /* 设置右边距为 20px */
+    float: right; 
+    margin-left: 0px; 
   }
   
   .image-container img {
-    max-width: 100%; /* 将图片宽度设置为最大不超过容器宽度 */
-    height: auto; /* 自适应高度，保持比例不变 */
-    object-fit: cover; /* 使用 cover 属性调整图片填充方式 */
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
     opacity: 0.7;
   }
   
